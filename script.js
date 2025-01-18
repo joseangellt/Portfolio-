@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
      
-     
    const presentation = document.getElementById('_presentation');
    const content = document.getElementById('_content');
 
@@ -50,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
 //Desplegare la info de diferentes previews utilizando el mismo elemento con la ayuda de un arrayList[]
 
 class Preview {
-     constructor(titulo, imagen, descripcion){
+     constructor(titulo, video, descripcion){
           this.titulo = titulo;
-          this.imagen = imagen;
+          this.video = video;
           this.descripcion = descripcion;
      }
 
      getInfo(){
-          return `titulo: ${this.titulo}, Imagen: ${this.imagen}`;
+          return `titulo: ${this.titulo}, Video: ${this.video}`;
      }
 }
 
@@ -66,14 +65,14 @@ let previewsArray = [];
 
 //Creando instancias de previews
 
-let locationApp = new Preview("Locaion App", "Imagenes/LOcation App.jpeg", "Esta es un app sencilla que cree y lo que hace es conectarse a la API de google y me muestra la ubicación exacta en la que se encuentra el dispositivo.");
-let musicAppUi = new Preview("Music App UI", "Imagenes/Music UI App.jpeg", "Esta es la UI de un app de música que hice utilizando Jetpack Compose.");
-let recepieApp = new Preview("Recepie App", "Imagenes/Recepie App.jpeg", "Esta es un app sencilla que creé su función principal es que descarga información de una API de recetas de comidas en la web.");
-let calculateYouAgeInMinutes = new Preview("Calculate Your Age In Minutes", "Imagenes/Calculate Age in minutes.jpeg", "Esta es un app sencilla que cree para calcular tu edad en minutos.");
-let fallDawn = new Preview("Fall Dawn", "Imagenes/fallDawn.png", "Este es una página web de venta de ropa contemporanea. Este proyecto lo realice como un proyecto final para una materia de la Universidad.");
-let quizApp = new Preview("Quiz App", "Imagenes/Quiz App.jpeg", "Este es un juego que hice de trivias de adivinar las banderas del mundo");
-let drawingApp = new Preview("Drawing App", "Imagenes/Drawing App preview.jpeg", "Esta es un app de dibujos para niños que creé utilizando canvas y Bitmap entre otros.");
-let sevenMinutesWorkout = new Preview("7 Minutes Workout", "Imagenes/SevenMinutesWorkout.jpeg", "Esta es un app sencilla que cree para ayudar a una persona a completar un a rutinas de ejercicios rápida y en casa. Cuenta con unas funcionalidades extra como una calculadora de Indice de Masa Corporal (BMI), así como un historial que registra todas las rutinas que has completado con fecha y hora.");
+let locationApp = new Preview("Location App", "Previews/LocationApp.mp4", "Esta es un app sencilla que cree y lo que hace es conectarse a la API de google y me muestra la ubicación exacta en la que se encuentra el dispositivo.");
+let musicAppUi = new Preview("Music App UI", "Previews/MusicAppUi.mp4", "Esta es la UI de un app de música que hice utilizando Jetpack Compose.");
+let recepieApp = new Preview("Recepie App", "Previews/recepieApp.mp4", "Esta es un app sencilla que creé su función principal es que descarga información de una API de recetas de comidas en la web.");
+let calculateYouAgeInMinutes = new Preview("Calculate Your Age In Minutes", "Previews/AgeInMinutes.mp4", "Esta es un app sencilla que cree para calcular tu edad en minutos.");
+let fallDawn = new Preview("Fall Dawn", "Previews/Falldawn.mp4", "Este es una página web de venta de ropa contemporanea. Este proyecto lo realice como un proyecto final para una materia de la Universidad.");
+let quizApp = new Preview("Quiz App", "Previews/QuizzApp.mp4", "Este es un juego que hice de trivias de adivinar las banderas del mundo");
+let drawingApp = new Preview("Drawing App", "Previews/DRawingApp.mp4", "Esta es un app de dibujos para niños que creé utilizando canvas y Bitmap entre otros.");
+let sevenMinutesWorkout = new Preview("7 Minutes Workout", "Previews/7minutesworkout.mp4", "Esta es un app sencilla que cree para ayudar a una persona a completar un a rutinas de ejercicios rápida y en casa. Cuenta con unas funcionalidades extra como una calculadora de Indice de Masa Corporal (BMI), así como un historial que registra todas las rutinas que has completado con fecha y hora.");
 let portfolio = new Preview("Portfolio", "Imagenes/portfolio.png", "Este es mi portafolio como desarrollador, lo cree para mostrar mis habilidades y capacidades como desarrollador.");
 
 //Agregar las instancias al array
@@ -101,12 +100,12 @@ function setPreviews(){
                
                //asignando los el titulo y la imagen al preview correspondiente
                document.getElementById("tituloProyecto").textContent = previewsArray[anchorId-1].titulo;
-               document.getElementById("imagenProyecto").src = previewsArray[anchorId-1].imagen;
+               document.getElementById("videoProyecto").src = previewsArray[anchorId-1].video;
                document.getElementById("descripcion").textContent = previewsArray[anchorId-1].descripcion;
 
                //Efecto de aparecer
                var preview = document.getElementById("_preview");
-               preview.style.display = "block";
+               preview.style.display = "inline-block";
                setTimeout(function(){
                     preview.style.opacity = "1";
                }, 1);

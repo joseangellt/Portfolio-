@@ -1,6 +1,11 @@
  @font-face {
-    font-family: 'Gravitica';
-    src: url(/Fuentes/Monospace\ font/GraviticaMono-LightDemo.otf);
+    font-family: 'JetBrainsMono';
+    src: url("Fuentes/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf");
+} 
+
+@font-face {
+    font-family: 'JetBrainsMonoExtraLight';
+    src: url("Fuentes/JetBrains_Mono/static/JetBrainsMono-ExtraLight.ttf");
 } 
 
 *{ 
@@ -9,13 +14,12 @@
     box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-    margin: 0;
+ body{
     overflow: auto;
     background-color: #100c0c;
     z-index: 0;   
 }
+
 
 .presentation{
     position: absolute;
@@ -28,62 +32,83 @@ html, body{
     transition: opacity 2s ease; 
 }
 
-.content{
+#presentation_text{
+    margin-top: 1%;
+
+}
+
+#_content{
     display: none;
     opacity: 0;
     transition: opacity 1s ease; 
 }
 
-
- .frame{
-    width:2280px;
-    height: 1090px;
-    position: relative;
-    border: solid 1px #ffff;
-    margin: 50px;
-    display: flex;
-    z-index: 1;
+.content{
+    position: absolute;
+    inset: 0;
+    margin: 2%;
+    display: block;
 }
 
 .galaxy{
-    position:absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
+    border: solid 1px #ffff;
     object-fit: cover;
     z-index: 1;
-}
+} 
 
-.imgBg{
+.resume{
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.49;
-    z-index: 2;
+    display: flex;
+    bottom: 3%;
+    right: 3%;
+    width: 135px;
+    font-size: 15px;
+    line-height: 22px;
+    z-index: 3;
+} 
+
+.circuloBlanco{
+    width: 15px;
+    height: 15px;
 }
 
 .text{
     color: #ffff;
-    font-family: 'Gravitica';
-    font-weight: 5px;
+    font-family: 'JetBrainsMonoExtraLight';
     z-index: 3;
+}
+
+.textNegro{
+    display: block;
+    color: white;
+    font-family: 'JetBrainsMonoExtraLight';
+    z-index: 3;
+    background-color: #000000;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 40%;
 }
 
 #joseangel{
     position: absolute;
     top: 50px;
     left: 50px;
-    font-size: 70px;
+    font-size: 60px;
 }
 
 #sftDev{
     position:absolute;
-    top: 145px;
+    top: 130px;
     left: 50px;
-    font-size: 18px;
+    font-size: 16px;
 }
+
 
 .navigation{
     position: absolute;
@@ -99,6 +124,7 @@ html, body{
 li{
     margin: 40px 0;
     transition: 0.5s;
+    font-size: 15px;
 }
 
 li:hover{
@@ -109,44 +135,26 @@ li:hover{
 a{
     text-decoration: none;
     color: #ffff;
-
 }
 
-.resume{
+
+ .marco-proyectos{
     position: absolute;
-    right: 70px;
-    bottom: 40px;
-    width: 150px;
+    top: 11%;
+    left: 53.5%;
+    width: 45%;
+    height: 84%;
     z-index: 3;
-    line-height: 25px;
-} 
-
-.circuloBlanco{
-    width: 15px;
-    height: 15px;
-}
-
-.marco-proyectos{
-    position: relative;
-    top: 130px;
-    left: 1250px;
-    width: 1000px;
-    height: 900px;
-     /* border: 1px solid #ffff;  */
-    z-index: 3;
-    justify-content: space-around;
-    align-content: space-around;
     overflow: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
-}
+} 
 
 
 .proyecto{
     position: absolute;
     top: 50px;
     left:200px;
-    font-size: 80px;
     list-style-type:none;
 }
 
@@ -155,34 +163,35 @@ a{
 }
 
 .item{
-    margin-bottom: 85px;
+    margin-bottom: 65px;
     display: flex;
     margin-right: 0;
-}
-
-.frame{
-    position: relative;
+    font-size: 435%;
 }
 
 .preview{
     display: none;
     position: absolute;
-    left: 700px;
-    top: 100px;
-    width: 600px;
+    left: 30%;
+    top: 11%;
+    width: 27%;
+    height: auto;
     padding: 25px 25px;
     background-color: #080c14;
     border-radius: 15px;
     align-items: center;
+    white-space: normal;
+    
     z-index: 8;
     box-shadow: 0px 0px 10px rbga(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 3s;
 }
 
-.imgPreview{
+.vidPreview{
     width: 100%;
-    height: 700px;
+    height: 600px;
+    background-color: #080c14 ;
 }
 
 #tituloProyecto{
@@ -192,6 +201,7 @@ a{
 #descripcion{
     margin-top: 10px;
     margin-left: 10px;
+    bottom: 10px;
 }
 
 .type{
@@ -203,7 +213,15 @@ a{
 }
 
 #CalculateYourAgeInMinutesType{
-    margin-top: 210px;
+    margin-top: 225px;
+}
+
+#minWorkout{
+    width: 900px;
+}
+
+#ageInMin{
+    width: 80%;
 }
 
 .card{
@@ -221,6 +239,7 @@ a{
     overflow: hidden;
 }
 
+
 .barraProgreso{
     position: absolute;
     top: 100px;
@@ -236,7 +255,7 @@ a{
 .porcentaje{
     position: absolute;
     top: 100px;
-    right: 60px;
+    right: 50px;
 }
 
 #card1{
@@ -259,6 +278,11 @@ a{
     height: 100px;
 }
 
+#nombreTitulo2{
+    position: absolute;
+    top: 15px;
+}
+
 #nombreTitulo3{
     display: flex;
     height: 20px;
@@ -276,28 +300,8 @@ a{
 
 #porcentaje3{
     position: absolute;
-    left: 200px;
     margin-top: 30px;
-    right: 55px;
-}
-
-.porcentSign{
-    position: absolute;
-    width: 40px;
-    right: 25px;
-    top: 60px;
-    display: flex;
-    z-index: 6;
-}
-
-#porcentSing1{
-    top: 100px;
-    right: 20px;
-}
-
-#porcentSing2{
-    top: 100px;
-    right: 20px;
+    right: 65px;
 }
 
 .contact{
