@@ -73,7 +73,7 @@ let fallDawn = new Preview("Fall Dawn", "Previews/Falldawn.mp4", "Este es una p�
 let quizApp = new Preview("Quiz App", "Previews/QuizzApp.mp4", "Este es un juego que hice de trivias de adivinar las banderas del mundo");
 let drawingApp = new Preview("Drawing App", "Previews/DRawingApp.mp4", "Esta es un app de dibujos para niños que creé utilizando canvas y Bitmap entre otros.");
 let sevenMinutesWorkout = new Preview("7 Minutes Workout", "Previews/7minutesworkout.mp4", "Esta es un app sencilla que cree para ayudar a una persona a completar un a rutinas de ejercicios rápida y en casa. Cuenta con unas funcionalidades extra como una calculadora de Indice de Masa Corporal (BMI), así como un historial que registra todas las rutinas que has completado con fecha y hora.");
-let portfolio = new Preview("Portfolio", "Imagenes/portfolio.png", "Este es mi portafolio como desarrollador, lo cree para mostrar mis habilidades y capacidades como desarrollador.");
+let portfolio = new Preview("Portfolio", "Previews/portfolio.mp4", "Este es mi portafolio como desarrollador, lo cree para mostrar mis habilidades y capacidades como desarrollador.");
 
 //Agregar las instancias al array
 previewsArray.push(locationApp);
