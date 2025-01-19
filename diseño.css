@@ -80,13 +80,6 @@
     z-index: 3;
 }
 
-.textNegro{
-    display: block;
-    color: white;
-    font-family: 'JetBrainsMonoExtraLight';
-    z-index: 3;
-    background-color: #000000;
-}
 
 .header{
     position: absolute;
